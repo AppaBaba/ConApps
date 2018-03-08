@@ -1,0 +1,27 @@
+Installing compilers using apt command
+
+Open the terminal app and type the following apt command/apt-get command:
+
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt install build-essential
+
+OR
+														
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install build-essential
+
+
+Verify installation
+
+Type the following commands:
+
+$ whereis gcc
+$ gcc --version
+$ make -v
+
+
+Python
+
+$ sudo apt-get install python2.7
