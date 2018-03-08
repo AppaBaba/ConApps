@@ -1,5 +1,5 @@
 # ConApps
-TUI
+
 This is about installing the console tools and applications for develoment of
 Text User Interface (TUI) and there will be no Graphical User Interface (GUI)
 I will start by showing how to install these tools and apps on Windows Subsystem
