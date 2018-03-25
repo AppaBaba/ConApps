@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 // Simple C++
-// No oop
+// No ooping
 //Just sending esc code sequence
 int main()
 {
