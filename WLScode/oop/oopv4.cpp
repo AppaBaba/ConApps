@@ -3,20 +3,21 @@ using namespace std;
 class pram
 {
         private:
-        int a,c;
+        int a,c; //two private data members
         public:
-        pram()
+// A constructor with default values
+        pram(int attr=1, int color=31)
         {
-            a=1;
-            c=31;
+            a=attr;
+            c=color;
         }
-        void input()
+// A function to make changes to data members
+        void change(int attr, int color)
         {
-             cout<<"input attr: ";
-             cin>>pram::a;
-             cout<<"input color: ";
-             cin>>pram::c;
+             a=attr;
+             c=color;
          }
+// A function to output the object data
          void output()
          {
              cout<<"\033["<<a<<";"<<c<<"m";
@@ -28,9 +29,14 @@ int main()
 {
         pram oop;
         cout<<"----PRAM C++ OOP APP---"<<endl;
-        oop.input();
         oop.output();
-        oop.input();
+        oop.change(1,32);
+        oop.output();
+        oop.change(1,33);
+        oop.output();
+        oop.change(1,34);
+        oop.output();
+        oop.change(1,35);
         oop.output();
         return 0;
 }
