@@ -13,7 +13,7 @@ class dsptxt
 // function to change background color
     void setbgc(int bgc=0) { b=bgc; }
 // A function to make changes to data members
-    void change(int attr, int fgc) {
+    void actxt(int attr, int fgc) {
 	a=attr;
 	c=fgc;
 	cout<<"\033["<<a<<";"<<c<<";"<<b<<"m"; }
@@ -23,7 +23,7 @@ class dsptxt
 	cm=col;
 	cout<<"\033["<<rw<<";"<<cm<<"H"; }
 // A function to output the object data
-    void output() {
+    void sndtxt() {
 	cout<<"This is what it looks like"; }
     void reset() {
 	cout<<"\033[0m\n"; }
@@ -35,21 +35,21 @@ int main()
 	oop.poscur(10,30);
         cout<<"----Colortxt C++ OOP APP---";
 	oop.poscur(11,32);
-	oop.change(bld,fgred);
-        oop.output();
+	oop.actxt(bld,fgred);
+        oop.sndtxt();
 	oop.poscur(12,34);
-        oop.change(bld,fggrn);
-        oop.output();
+        oop.actxt(bld,fggrn);
+        oop.sndtxt();
 	oop.poscur(13,36);
-        oop.change(bld,fgylw);
-        oop.output();
+        oop.actxt(bld,fgylw);
+        oop.sndtxt();
 	oop.poscur(14,38);
 	oop.setbgc(bgwht);
-        oop.change(bld,fgblu);
-        oop.output();
+        oop.actxt(bld,fgblu);
+        oop.sndtxt();
 	oop.poscur(15,40);
-        oop.change(bld,fgmgt);
-        oop.output();
+        oop.actxt(bld,fgmgt);
+        oop.sndtxt();
 	oop.reset();
 	oop.poscur(16,42);
 	cout << "Terminal text back to normal";
