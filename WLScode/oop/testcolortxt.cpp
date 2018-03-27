@@ -3,7 +3,6 @@ using namespace std;
 enum attr {rst, bld, dim, so, us, blnk};
 enum fg {fgblk=30,fgred=31, fggrn=32, fgylw=33, fgblu=34, fgmgt=35, fgcyn=36, fgwht=37};
 enum bg {bgblk=40,bgred=41, bggrn=42, bgylw=43, bgblu=44, bgmgt=45, bgcyn=46, bgwht=47};
-string sometext = "This is what it looks like";
 class dsptxt
 {
     private:
@@ -24,8 +23,8 @@ class dsptxt
 	cm=col;
 	cout<<"\033["<<rw<<";"<<cm<<"H"; }
 // A function to output the object data
-    void sndtxt() { 
-	cout<<sometext; }
+    void sndtxt() {
+	cout<<"This is what it looks like"; }
     void reset() {
 	cout<<"\033[0m\n"; }
 };
