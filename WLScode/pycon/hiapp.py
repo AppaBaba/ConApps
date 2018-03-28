@@ -1,0 +1,10 @@
+
+print u'\u001b[2J'
+print u'\u001b[31mHi there \u001b[0mAppa'
+print u'\u001b[1;31mHi there \u001b[0mAppa'
+print u'\u001b[32mHi there \u001b[0mAppa'
+print u'\u001b[1;32mHi there \u001b[0mAppa'
+print u'\u001b[33mHi there \u001b[0mAppa'
+print u'\u001b[1;33mHi there \u001b[0mAppa'
+print u'\u001b[34mHi there \u001b[0mAppa'
+print u'\u001b[1;34mHi there \u001b[0mAppa'
