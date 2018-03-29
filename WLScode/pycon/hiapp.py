@@ -1,4 +1,4 @@
-
+# Hi app in color
 print u'\u001b[2J'
 print u'\u001b[31mHi there \u001b[0mAppa'
 print u'\u001b[1;31mHi there \u001b[0mAppa'
