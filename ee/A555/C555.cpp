@@ -6,16 +6,21 @@ private:
     float r1, r2, c1, fr, TH, TL, dcp;
 public:
     C555(float Res1=5000, float Res2=5000, float Cap1=0.000001) {r1=Res1; r2=Res2; c1=Cap1;
+		cout << "\033[2J";
+		cout << "\033[1;33m";
 		cout << "Astable 555 Calculator" << endl << endl;
+		cout << "\033[1;32m";
 		cout << "R1 = " << r1 << endl;
 		cout << "R2 = " << r2 << endl;
 		cout << "C1 = " << c1 << endl; }
     void setR1R2(float newRes1, float newRes2) { r1=newRes1; r2=newRes2;
+		cout << "\033[1;32m";
 		cout << "R1 change to " << r1 << endl;
 		cout << "R2 change to " << r2 << endl; }
     void setC1(float newCap1) { c1=newCap1;
 		cout << "C2 changed to " << c1 << endl; }
     void Freq() { fr = 1.44 /((r1 + r2 + r2) * c1);
+		cout << "\033[1;31m";
 		cout << "Frequency = " << fr << endl; }
     void High() { TH =  0.693 * (r1 + r2) * c1;
 		cout << "Time High = " << TH << endl; }
