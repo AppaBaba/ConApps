@@ -4,34 +4,42 @@
     who(pete).
     who(fred).
 
-    what(camping).
-    what(music).
-    what(movies).
-    what(eating).
-    what(sleeping).
-    what(reading).
-    what(travel).
+    activity(camping).
+    activity(music).
+    activity(movies).
+    activity(eating).
+    activity(sleeping).
+    activity(reading).
+    activity(travel).
 
-    likes(don,camping).
-    likes(don,music).
-    likes(don,movies).
-    likes(don,reading).
-    likes(don,sleeping).
+    enjoys(don,camping).
+    enjoys(don,music).
+    enjoys(don,movies).
+    enjoys(don,reading).
+    enjoys(don,sleeping).
         
-    likes(kim,sleeping).
-    likes(kim,music).
-    likes(kim,movies).
+    enjoys(kim,sleeping).
+    enjoys(kim,music).
+    enjoys(kim,movies).
     
-    likes(dan,music).
-    likes(dan,eating).
-    likes(dan,sleeping).
+    enjoys(dan,music).
+    enjoys(dan,eating).
+    enjoys(dan,sleeping).
     
-    likes(pete,sleeping).
-    likes(pete,eating).
+    enjoys(pete,sleeping).
+    enjoys(pete,eating).
     
-    likes(fred,music).
-    likes(fred,reading).
-    likes(fred,travel).
+    enjoys(fred,music).
+    enjoys(fred,reading).
+    enjoys(fred,travel).
 
-    persons(X, Y) :- likes(X, Y), who(X).
-    hobbies(X, Y) :- likes(X, Y), what(Y).
+    persons(X, Y) :- enjoys(X, Y), who(X).
+    hobbies(X, Y) :- enjoys(X, Y), activit(Y).
+
+whoenjoys:-
+	write('Who enjoys camping?'),nl,
+	hobbies(X,camping),
+	write(X);nl,
+	write('Who enjoys music?'),nl,
+	hobbies(X,music),
+	write(X);nl.
