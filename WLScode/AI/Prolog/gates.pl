@@ -5,19 +5,13 @@ and(0,1,0).
 and(1,0,0).
 and(1,1,1).
 
-nand(In1,In2,Out):-and(In1,In2,Node),
-			inv(Node,Out).
+nand(A,B,NZ):-and(A,B,C),
+		inv(C,NZ).
 
-xor(NodeX,NodeY,NodeZ):-and(NodeX,NodeY,NodeA),
-			and(NodeX,NodeA,NodeB),
-			and(NodeY,NodeA,NodeC),
-			and(NodeB,NodeC,NodeZ).
+xor(A,B,S):-nand(A,B,D),
+	    nand(A,D,E),
+	    nand(B,D,F),
+	    nand(E,F,S).
 
-testnand:-nand(0,0,Out),
-	write(Out),nl,
-	nand(1,0,Out),
-	write(Out),nl,
-	nand(0,1,Out),
-	write(Out),nl,
-	nand(1,1,Out),
-	write(Out),nl.
+halfadder(A,B,Sum,Carry):-xor(A,B,Sum),
+			and(A,B,Carry).
