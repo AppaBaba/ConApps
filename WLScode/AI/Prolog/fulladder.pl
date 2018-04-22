@@ -19,3 +19,9 @@ xor(A,B,S):-nand(A,B,D),
 
 halfadder(A,B,Sum,Carry):-xor(A,B,Sum),
 			and(A,B,Carry).
+
+fulladder(A,B,Cin,Sum,Carry):-xor(A,B,S1),
+			and(A,B,C1),
+			xor(S1,Cin,Sum),
+			and(Cin,S1,C2),
+			or(C2,C1,Carry).
