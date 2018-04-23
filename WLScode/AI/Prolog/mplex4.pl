@@ -14,12 +14,12 @@ dec2x4(0,1,0,0,1,0).
 dec2x4(1,0,0,1,0,0).
 dec2x4(1,1,1,0,0,0).
 
-plex2(A0,A1,S,Out):-dec(S,D0,D1),
+mplex2(A1,A0,S,Out):-dec(S,D0,D1),
 		    and2(A0,D0,Q0),
 		    and2(A1,D1,Q1),
 		    or2(Q0,Q1,Out).
 
-mpx4(A3,A2,A1,A0,S1,S0,Out):-dec2x4(S1,S0,D3,D2,D1,D0),
+mplex4(A3,A2,A1,A0,S1,S0,Out):-dec2x4(S1,S0,D3,D2,D1,D0),
 			    and2(A0,D0,Q0),
 			    and2(A1,D1,Q1),
 			    and2(A2,D2,Q2),
