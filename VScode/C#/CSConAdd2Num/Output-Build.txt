@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: CSConAdd2Num, Configuration: Debug Any CPU ------
+1>CSConAdd2Num -> C:\Users\darel\Documents\GitHub\ConApps\VScode\C#\CSConAdd2Num\CSConAdd2Num\bin\Debug\netcoreapp2.0\CSConAdd2Num.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
